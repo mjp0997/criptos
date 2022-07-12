@@ -1,16 +1,13 @@
 :root {
    /* Fonts */
    --main-font: 'Roboto Flex', sans-serif;
-   --brand-font: 'Harry Potter', sans-serif;
 
    /* Colors */
-   --bg-body: rgb(240, 250, 255);
+   --white: #EAECEF;
 
-   --black: rgb(0, 14, 36);
+   --black: #0B0E11;
+   --soft-black: #181A20;
+
    --grey: #353535;
    --light-grey: #ACACAC;
-
-   --main-color: #FF0000;
-   --light-main-color: #ff9595;
-   --dark-main-color: #990000;
 }

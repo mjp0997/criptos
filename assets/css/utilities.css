@@ -8,3 +8,37 @@
 .img-container > img {
    width: 100%;
 }
+
+
+
+/* Sections */
+
+.section-full {
+   min-height: calc(100vh - 5.625rem);
+}
+
+
+
+/* Fonts */
+
+.font-intro {
+   font-size: 6rem;
+   font-weight: 600;
+}
+
+.font-data {
+   font-size: 4rem;
+   font-weight: 600;
+}
+
+
+
+/* Backgrounds */
+
+.bg-main {
+   background-color: var(--black)!important;
+}
+
+.bg-element {
+   background-color: var(--soft-black)!important;
+}
