@@ -42,3 +42,15 @@
 .bg-element {
    background-color: var(--soft-black)!important;
 }
+
+
+
+/* Colors */
+
+.font-white {
+   color: var(--white);
+}
+
+.font-grey {
+   color: var(--light-grey);
+}
