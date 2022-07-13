@@ -15,6 +15,14 @@
          crossorigin="anonymous"
       >
 
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+
       <link rel="stylesheet" href="./assets/css/index.css">
    </head>
    <body class="text-bg-dark bg-main">
@@ -25,12 +33,24 @@
                <img src="./assets/images/logo.svg" alt="brand logo"  width="40" height="40">
             </a>
 
+            <div class="ms-auto me-5 d-flex align-items-center gap-4">
+               <i class="fa-solid fa-user font-white" style="font-size: 2.4rem;"></i>
+               
+               <div class="d-flex flex-column align-items-start">
+                  <p class="m-0 fs-4 lh-1 text-info mb-1 cursor-pointer hover-info">Iniciar sesión</p>
+
+                  <p class="m-0 fs-5 lh-1 font-white cursor-pointer hover-info">Registrarme</p>
+               </div>
+            </div>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav ms-auto gap-5 mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-grow: 0!important;">
+               <ul class="navbar-nav gap-5 mb-2 mb-lg-0">
+                  <div class="border-end d-none d-md-block"></div>
+
                   <li class="nav-item">
                      <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                   </li>
@@ -147,7 +167,7 @@
                <div class="d-flex flex-column flex-md-row align-items-end justify-content-between pb-5 mb-5">
                   <h1 class="font-data my-0 font-white">Criptomonedas populares</h1>
 
-                  <a href="#" class="mb-1 text-info text-decoration-none">Ver más criptos</a>
+                  <a href="#" class="mb-1 text-info text-decoration-none hover-info">Ver más criptos</a>
                </div>
 
                <div class="card text-bg-dark bg-element rounded-5" style="overflow: hidden;">

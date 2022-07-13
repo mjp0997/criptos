@@ -58,3 +58,19 @@
 .font-grey {
    color: var(--light-grey);
 }
+
+.hover-info {
+   transition: color 0.3s ease-in-out;
+}
+
+.hover-info:hover {
+   color: #0889a3!important;
+}
+
+
+
+/* Cursors */
+
+.cursor-pointer {
+   cursor: pointer;
+}
