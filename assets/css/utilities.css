@@ -135,9 +135,12 @@
    .tooltip-element {
       position: absolute;
       top: calc(100% + 1rem);
-      right: -3rem;
+      right: unset;
       bottom: unset;
-      left: unset;
+      left: -3rem;
+
+      background-color: transparent;
+      backdrop-filter: unset;
    }
 }
 
