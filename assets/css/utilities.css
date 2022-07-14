@@ -17,6 +17,12 @@
    min-height: calc(100vh - 5.625rem);
 }
 
+.section-full-spy {
+   min-height: 100vh;
+
+   padding-top: 5.625rem;
+}
+
 
 
 /* Fonts */
@@ -47,12 +53,38 @@
    background-color: var(--soft-black)!important;
 }
 
+.bg-parallax {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+
+   backdrop-filter: blur(1rem);
+
+   background-color: rgba(0, 0, 0, 0.80);
+   background-blend-mode: color-dodge;
+}
+
+.bg-img-1 {
+   background-image: url('../images/bg-1.webp');
+}
+
 
 
 /* Colors */
 
 .font-white {
    color: var(--white);
+}
+
+.link-white {
+   color: var(--white);
+
+   transition: color 0.3s ease-in-out;
+}
+
+.link-white.active {
+   color: #0DCAF0!important;
 }
 
 .font-grey {
@@ -136,4 +168,32 @@
 
 .tooltip-element.show > main {
    transform: translateY(0);
+}
+
+
+
+/* Buttons */
+
+.top-btn {
+   position: fixed;
+   right: 2rem;
+   bottom: 2rem;
+
+   cursor: pointer;
+
+   z-index: 100;
+}
+
+@media only screen and (min-width: 768px) {
+   .top-btn {
+      display: none;
+   }
+}
+
+.top-btn > i {
+   font-size: 5rem;
+
+   border-radius: 50%;
+
+   box-shadow: 0 0 0.5rem 0.2rem #0DCAF0;
 }
