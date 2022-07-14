@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Criptos</title>
+
+      <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/x-icon">
+
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+         crossorigin="anonymous"
+      >
+
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+
+      <link rel="stylesheet" href="./assets/css/index.css">
+   </head>
+   <body class="text-bg-dark bg-main">
+      <!-- Header -->
+      <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top bg-element">
+         <div class="container-fluid px-5">
+            <a class="navbar-brand" href="./index.html">
+               <img src="./assets/images/logo.svg" alt="brand logo"  width="40" height="40">
+            </a>
+
+            <div class="ms-auto me-5 d-flex align-items-center gap-4 position-relative">
+               <i class="fa-solid fa-user font-white" style="font-size: 2.4rem;"></i>
+               
+               <div class="d-flex flex-column align-items-start">
+                  <p class="m-0 fs-4 lh-1 text-info mb-1 cursor-pointer hover-info" id="login">Iniciar sesión</p>
+
+                  <p class="m-0 fs-5 lh-1 font-white cursor-pointer hover-info" id="register">Registrarme</p>
+               </div>
+
+               <div class="tooltip-element" id="login-form">
+                  <main class="d-flex flex-column">
+                     <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-nowrap mb-0 fs-1">Iniciar sesión</p>
+
+                        <i class="fa-solid fa-xmark text-danger cursor-pointer" id="login-close"></i>
+                     </div>
+
+                     <div class="border-bottom mb-4"></div>
+
+                     <form class="d-flex flex-column">
+                        <div class="mb-4">
+                           <div class="input-group input-group-lg flex-nowrap">
+                              <span class="input-group-text d-flex justify-content-center align-items-center bg-main" style="width: 4rem;">
+                                 <i class="fa-solid fa-envelope"></i>
+                              </span>
+
+                              <input type="email" class="form-control fs-4 bg-element" placeholder="Correo electrónico">
+                           </div>
+                        </div>
+
+                        <div class="mb-4">
+                           <div class="input-group input-group-lg flex-nowrap">
+                              <span class="input-group-text d-flex justify-content-center align-items-center bg-main" style="width: 4rem;">
+                                 <i class="fa-solid fa-lock"></i>
+                              </span>
+
+                              <input type="email" class="form-control fs-4 bg-element" placeholder="Contraseña">
+                           </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                           <p class="m-0 text-info cursor-pointer hover-info" id="login-redir">Registrarme</p>
+                           
+                           <button type="submit" class="btn btn-info ms-auto fs-4">Ingresar</button>
+                        </div>
+                     </form>
+                  </main>
+               </div>
+
+               <div class="tooltip-element" id="register-form">
+                  <main class="d-flex flex-column">
+                     <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-nowrap mb-0 fs-1">Registro</p>
+
+                        <i class="fa-solid fa-xmark text-danger cursor-pointer" id="register-close"></i>
+                     </div>
+
+                     <div class="border-bottom mb-4"></div>
+
+                     <form class="d-flex flex-column">
+                        <div class="mb-4">
+                           <div class="input-group input-group-lg flex-nowrap">
+                              <span class="input-group-text d-flex justify-content-center align-items-center bg-main" style="width: 4rem;">
+                                 <i class="fa-solid fa-envelope"></i>
+                              </span>
+
+                              <input type="email" class="form-control fs-4 bg-element" placeholder="Correo electrónico">
+                           </div>
+
+                          <div class="form-text text-white text-opacity-50">Nunca compartiremos esta información con nadie.</div>
+                        </div>
+
+                        <div class="mb-4">
+                           <div class="input-group input-group-lg flex-nowrap">
+                              <span class="input-group-text d-flex justify-content-center align-items-center bg-main" style="width: 4rem;">
+                                 <i class="fa-solid fa-lock"></i>
+                              </span>
+
+                              <input type="email" class="form-control fs-4 bg-element" placeholder="Contraseña">
+                           </div>
+                        </div>
+
+                        <div class="mb-4">
+                           <div class="input-group input-group-lg flex-nowrap">
+                              <span class="input-group-text d-flex justify-content-center align-items-center bg-main" style="width: 4rem;">
+                                 <i class="fa-solid fa-lock"></i>
+                              </span>
+
+                              <input type="email" class="form-control fs-4 bg-element" placeholder="Repetir contraseña">
+                           </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                           <p class="m-0 text-info cursor-pointer hover-info" id="register-redir">Iniciar sesión</p>
+                           
+                           <button type="submit" class="btn btn-info ms-auto fs-4">Registrarme</button>
+                        </div>
+                     </form>
+                  </main>
+               </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-grow: 0!important;">
+               <ul class="navbar-nav gap-5 mb-2 mb-lg-0">
+                  <div class="border-end d-none d-md-block"></div>
+
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+                  </li>
+
+                  <li class="nav-item">
+                     <a class="nav-link active" href="./cryptos.html">Criptomonedas</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- End: Header -->
+
+      <!-- Section -->
+      <section class="container-fluid py-5 mt-5">
+         <div class="row">
+            <div class="col-11 mx-auto">
+               <div class="d-flex flex-column flex-md-row align-items-end justify-content-between pb-5 mb-5">
+                  <h1 class="font-data my-0 font-white">Criptomonedas</h1>
+               </div>
+
+               <div class="card text-bg-dark bg-element rounded-5" style="overflow: hidden;">
+                  <div class="table-responsive">
+                     <table class="table table-dark table-striped table-borderless align-middle mb-0">
+                        <thead>
+                           <tr>
+                              <th class="p-5 font-grey fw-normal" scope="col">Criptomoneda</th>
+                              <th class="p-5 font-grey fw-normal" scope="col">Último precio</th>
+                              <th class="p-5 font-grey fw-normal text-end" scope="col">Variación en 24 h</th>
+                              <th class="p-5 font-grey fw-normal text-end" scope="col">Capital de mercado</th>
+                           </tr>
+                        </thead>
+      
+                        <tbody>
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/btc.svg" alt="btc">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BTC</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Bitcoin</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$19.873,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-2.54%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$379.661,25M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/bnb.svg" alt="bnb">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BNB</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">BNB</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$225,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+0.34%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$36.835,28M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/eth.svg" alt="eth">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">ETH</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Ethereum</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$1.085,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+2.71%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$131.871,63M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/xmr.svg" alt="xmr">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">XMR</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Monero</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$127,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-0.78%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$2.308,22M</td>
+                           </tr>
+
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/btc.svg" alt="btc">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BTC</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Bitcoin</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$19.873,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-2.54%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$379.661,25M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/bnb.svg" alt="bnb">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BNB</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">BNB</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$225,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+0.34%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$36.835,28M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/eth.svg" alt="eth">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">ETH</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Ethereum</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$1.085,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+2.71%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$131.871,63M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/xmr.svg" alt="xmr">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">XMR</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Monero</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$127,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-0.78%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$2.308,22M</td>
+                           </tr>
+
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/btc.svg" alt="btc">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BTC</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Bitcoin</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$19.873,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-2.54%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$379.661,25M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/bnb.svg" alt="bnb">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BNB</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">BNB</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$225,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+0.34%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$36.835,28M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/eth.svg" alt="eth">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">ETH</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Ethereum</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$1.085,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+2.71%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$131.871,63M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/xmr.svg" alt="xmr">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">XMR</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Monero</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$127,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-0.78%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$2.308,22M</td>
+                           </tr>
+
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/btc.svg" alt="btc">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BTC</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Bitcoin</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$19.873,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-2.54%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$379.661,25M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/bnb.svg" alt="bnb">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BNB</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">BNB</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$225,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+0.34%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$36.835,28M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/eth.svg" alt="eth">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">ETH</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Ethereum</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$1.085,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+2.71%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$131.871,63M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/xmr.svg" alt="xmr">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">XMR</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Monero</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$127,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-0.78%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$2.308,22M</td>
+                           </tr>
+
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/btc.svg" alt="btc">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BTC</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Bitcoin</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$19.873,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-2.54%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$379.661,25M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/bnb.svg" alt="bnb">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">BNB</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">BNB</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$225,70</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+0.34%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$36.835,28M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/eth.svg" alt="eth">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">ETH</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Ethereum</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$1.085,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-success">+2.71%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$131.871,63M</td>
+                           </tr>
+   
+                           <tr>
+                              <th class="px-5 py-4" scope="row">
+                                 <div class="d-flex align-items-center">
+                                    <div class="img-container" style="width: 3.5rem;">
+                                       <img src="./assets/images/xmr.svg" alt="xmr">
+                                    </div>
+   
+                                    <p class="my-0 ms-3 fw-semibold font-white">XMR</p>
+   
+                                    <span class="ms-3 fw-lighter font-grey">Monero</span>
+                                 </div>
+                              </th>
+   
+                              <td class="px-5 py-4 font-white">$127,20</td>
+   
+                              <td class="px-5 py-4 text-end fw-semibold text-danger">-0.78%</td>
+   
+                              <td class="px-5 py-4 text-end font-white">$2.308,22M</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- End: Section -->
+
+      <!-- Section -->
+      <section class="container-fluid py-5 mt-5 bg-element">
+         <div class="row py-5">
+            <div class="col-11 mx-auto py-4">
+               <div class="d-flex flex-column align-items-center">
+                  <p class="font-data font-white text-center">Únete a más de 15 millones de personas</p>
+
+                  <button class="btn btn-info font-btn px-5 mt-5" id="register-section">Regístrate</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- End: Section -->
+
+      <!-- TODO: Footer -->
+      <!-- TODO: branding -->
+
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+         crossorigin="anonymous"
+      ></script>
+
+      <script src="./assets/js/index.js"></script>
+   </body>
+</html>
