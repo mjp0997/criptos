@@ -74,3 +74,64 @@
 .cursor-pointer {
    cursor: pointer;
 }
+
+
+
+/* Tooltips */
+
+.tooltip-element {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background-color: rgba(0, 0, 0, 0.45);
+   backdrop-filter: blur(0.5rem);
+
+   opacity: 0;
+   visibility: hidden;
+
+   transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+   .tooltip-element {
+      position: absolute;
+      top: calc(100% + 1rem);
+      right: -3rem;
+   }
+}
+
+.tooltip-element.show {
+   opacity: 1;
+   visibility: visible;
+}
+
+.tooltip-element > main {
+   width: 85%;
+
+   background-color: #2c3034;
+
+   padding: 1.5rem 2rem;
+
+   border-radius: 0.5rem;
+
+   transform: translateY(-150%);
+
+   transition: transform 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+   .tooltip-element > main {
+      width: 30rem;
+   }
+}
+
+.tooltip-element.show > main {
+   transform: translateY(0);
+}
