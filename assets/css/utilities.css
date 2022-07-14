@@ -104,6 +104,8 @@
       position: absolute;
       top: calc(100% + 1rem);
       right: -3rem;
+      bottom: unset;
+      left: unset;
    }
 }
 
